@@ -29,7 +29,7 @@ function ShowPage({user}) {
     window.scrollTo(0, 0)
   }, [postId])
 
-  async function likePost() {
+async function likePost() {
     const updatedPost = await postsAPI.likePost(post._id)
     setLikeTotal(updatedPost.likes.length - updatedPost.dislikes.length)
     honk.play()
